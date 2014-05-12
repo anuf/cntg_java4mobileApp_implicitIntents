@@ -4,10 +4,11 @@
     <string name="app_name">ImplicitIntents</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="uri4browser">Write a URI to open</string>
-	<string name="browser">Browser</string>
-	<string name="text2send">Write a text to send</string>
-	<string name="sms">SMS</string>
-	<string name="phone">Phone to send SMS (emulator number to test)</string>
+    <string name="uri4browser">http://</string>
+	<string name="browser">Open Browser</string>
+	<string name="body2send">Text body</string>
+	<string name="sms">Send SMS</string>
+	<string name="phone">Phone (emulator number to test)</string>
+	<string name="call">Call</string>
 	
 </resources>

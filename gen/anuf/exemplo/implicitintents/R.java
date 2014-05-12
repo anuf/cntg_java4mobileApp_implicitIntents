@@ -25,8 +25,9 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
+        public static final int action_settings=0x7f080007;
         public static final int btnBrowser=0x7f080002;
+        public static final int btnCall=0x7f080006;
         public static final int btnSMS=0x7f080005;
         public static final int container=0x7f080000;
         public static final int etPhone=0x7f080003;
@@ -43,11 +44,12 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
+        public static final int body2send=0x7f050005;
         public static final int browser=0x7f050004;
+        public static final int call=0x7f050008;
         public static final int hello_world=0x7f050001;
         public static final int phone=0x7f050007;
         public static final int sms=0x7f050006;
-        public static final int text2send=0x7f050005;
         public static final int uri4browser=0x7f050003;
     }
     public static final class style {

@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="anuf.exemplo.implicitintents.MainActivity$PlaceholderFragment" 
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="anuf.exemplo.implicitintents.MainActivity$PlaceholderFragment" >
 
     <EditText
         android:id="@+id/etURIbrowser"
@@ -23,20 +23,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="phone"
-        android:hint="@string/phone" />
+        android:hint="@string/phone"
+        android:inputType="phone" />
+
     <EditText
         android:id="@+id/etTextTosend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:hint="@string/text2send" />
+        android:hint="@string/body2send"
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/btnSMS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sms" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/call" />
 
 </LinearLayout>
