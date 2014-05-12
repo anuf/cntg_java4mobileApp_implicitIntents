@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 	
@@ -53,6 +54,10 @@ public class MainActivity extends Activity {
 	public static class PlaceholderFragment extends Fragment {
 
 		private Button btnBrowser;
+		private EditText etBrowser;
+		private EditText etPhone;
+		private Button btnSMS;
+		private EditText etTextToSend;
 		public PlaceholderFragment() {
 		}
 
@@ -61,14 +66,40 @@ public class MainActivity extends Activity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,
 					false);
+			
+			etBrowser = (EditText) rootView.findViewById(R.id.etURIbrowser);
 			btnBrowser = (Button) rootView.findViewById(R.id.btnBrowser);
+			etPhone =   (EditText) rootView.findViewById(R.id.etPhone);
+			etTextToSend = (EditText) rootView.findViewById(R.id.etTextTosend);
+			btnSMS = (Button) rootView.findViewById(R.id.btnSMS);
+			
+			
 			btnBrowser.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
-					String url = "https://github.com/";
+					
+					String url = etBrowser.getText().toString();
 					Intent unIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-					startActivity(unIntent);
+					if(unIntent.resolveActivity(getActivity().getPackageManager()) != null){
+						startActivity(unIntent);
+					}
+					
+				}
+			});
+			
+			btnSMS.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+					String texto = etTextToSend.getText().toString();
+					String phone = etPhone.getText().toString(); // emulator number if no real device is running
+					Intent unIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:"+phone));
+					unIntent.putExtra("sms_body",texto); // If we want to send some pre-loaded text
+					if(unIntent.resolveActivity(getActivity().getPackageManager()) != null){
+						startActivity(unIntent);
+					}
 					
 				}
 			});

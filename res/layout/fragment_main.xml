@@ -2,12 +2,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="anuf.exemplo.implicitintents.MainActivity$PlaceholderFragment" >
+    tools:context="anuf.exemplo.implicitintents.MainActivity$PlaceholderFragment" 
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etURIbrowser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/uri4browser" />
 
     <Button
         android:id="@+id/btnBrowser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/browser" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/phone" />
+    <EditText
+        android:id="@+id/etTextTosend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/text2send" />
+
+    <Button
+        android:id="@+id/btnSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sms" />
 
 </LinearLayout>
